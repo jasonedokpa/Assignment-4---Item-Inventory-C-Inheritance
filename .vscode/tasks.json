@@ -1,0 +1,68 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build",
+			"dependsOn": ["C/C++: g++.exe build storage.exe", "C/C++: g++.exe build TestNewClasses.exe"]
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build storage.exe",
+			"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${workspaceFolder}\\storage.cpp",
+				"${workspaceFolder}\\Item.cpp",
+				"${workspaceFolder}\\ItemFactory.cpp",
+				"${workspaceFolder}\\ItemStack.cpp",
+				"${workspaceFolder}\\Inventory.cpp",
+				"${workspaceFolder}\\Armour.cpp",
+				"${workspaceFolder}\\Consumable.cpp",
+				"${workspaceFolder}\\utilities.cpp",
+				"-o",
+				"${workspaceFolder}\\storage.exe"
+			],
+			"options": {
+				"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": 
+			{
+			"kind": "build",
+			"isDefault": true
+			},
+			"detail": "compiler: \"C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe\""
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build TestNewClasses.exe",
+			"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${workspaceFolder}\\Item.cpp",
+				"${workspaceFolder}\\ItemStack.cpp",
+				"${workspaceFolder}\\Inventory.cpp",
+				"${workspaceFolder}\\TestNewClasses.cpp",
+				"${workspaceFolder}\\Armour.cpp",
+				"${workspaceFolder}\\Consumable.cpp",
+				"${workspaceFolder}\\utilities.cpp",
+				"-o",
+				"${workspaceFolder}\\TestNewClasses.exe"
+			],
+			"options": {
+				"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": 
+			{
+			"kind": "build",
+			"isDefault": true
+			},
+			"detail": "compiler: \"C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe\""
+		}
+	]
+}
